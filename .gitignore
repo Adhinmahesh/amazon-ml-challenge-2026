@@ -39,6 +39,10 @@ env/
 # ── OS / IDE ────────────────────────────────
 .DS_Store
 Thumbs.db
+__MACOSX/
+**/__MACOSX/**
+._*
+**/._*
 .vscode/
 .idea/
 *.swp
