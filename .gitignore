@@ -1,0 +1,53 @@
+# ============================================
+# 🔒 GITIGNORE — Amazon ML Challenge 2026
+# ============================================
+
+# ── Python ───────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual Environment ─────────────────────
+venv/
+.venv/
+env/
+.env
+
+# ── Dataset (LARGE FILES — DO NOT PUSH) ─────
+# Raw data (~1.5 GB+ of TSV files)
+6ab10eb3b23ba_student_resource/student_resource/dataset/
+6ab10eb3b23ba_student_resource/student_resource/partitions/
+6ab10eb3b23ba_student_resource/student_resource/checkpoints/
+
+# Zip archives (1 GB+)
+*.zip
+
+# ── Model & Output Artifacts ────────────────
+6ab10eb3b23ba_student_resource/student_resource/output/
+*.pkl
+*.pickle
+
+# ── PDFs (problem statements) ───────────────
+# Uncomment below if you DON'T want to track PDFs
+# *.pdf
+
+# ── OS / IDE ────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Jupyter Notebooks ───────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Logs ────────────────────────────────────
+*.log
