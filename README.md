@@ -1,12 +1,12 @@
-# 🏢 Amazon ML Challenge 2026 — Business Entity Resolution
+# Amazon ML Challenge 2026 — Business Entity Resolution
 
 A complete end-to-end machine learning pipeline for resolving business entities across multiple data sources. Given business records from three different sources (Source 1, Source 2, Source 3), the system identifies which records refer to the same real-world business entity.
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Match business entities across three data sources using name, address, and country information. Evaluation metric: **Macro F₀.₅** (precision-weighted).
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -20,7 +20,7 @@ Match business entities across three data sources using name, address, and count
 └─────────────────────────────────────────────────────────┘
 ```
 
-## ✨ Key Features
+## Key Features
 
 - **Memory-Optimized**: Runs on machines with as little as 15 GB RAM using disk-based country partitioning
 - **Checkpointing**: Stop and resume at any phase — progress is saved to disk automatically
@@ -54,7 +54,7 @@ haws/
 └── venv/                      # Python virtual environment (not tracked)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 
@@ -100,7 +100,7 @@ python solution_local.py
 python solution_colab.py
 ```
 
-## ⏸️ Checkpointing (Stop & Resume)
+## Checkpointing (Stop & Resume)
 
 The local pipeline supports full checkpointing. You can stop at any time with `Ctrl+C` and resume later:
 
@@ -132,7 +132,7 @@ Key parameters in `solution_local.py` (Config class):
 | `OPTUNA_TIMEOUT` | 1800s | Max time for tuning (30 min) |
 | `FINAL_N_ESTIMATORS` | 2000 | Max boosting rounds for final model |
 
-## 📊 Pipeline Details
+## Pipeline Details
 
 ### Blocking Strategy
 - **Country partitioning**: Only compare entities within the same country
@@ -150,7 +150,7 @@ Key parameters in `solution_local.py` (Config class):
 - **LightGBM** binary classifier with Optuna-tuned hyperparameters
 - **Threshold optimization**: Grid search on validation set for F₀.₅
 
-## 📤 Output Files
+## Output Files
 
 After the pipeline completes:
 - `matching_results.tsv` — Upload to the leaderboard
@@ -169,6 +169,6 @@ After the pipeline completes:
 - **Optuna** — Hyperparameter optimization
 - **tqdm** — Progress bars
 
-## 📝 License
+## License
 
 This project was created for the Amazon ML Challenge 2026. All rights reserved.
